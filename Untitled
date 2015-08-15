@@ -1,0 +1,23 @@
+<h1>メッセージ一覧</h1>
+<% @messages.each do |message| %>
+  名前:<%= message.name %>
+  内容:<%= message.body %>
+  <br>
+<% end %>
+
+<%= form_for(Message.new) do |f| %>
+  名前:
+  <%= f.text_area :name %>
+
+  内容:
+  <%= f.text_area :body %>
+  <%= f.submit %>
+<% end %>
+
+<p>
+<label for="名前">内容：</label><br>
+<textarea id="名前" name="名前" cols="40" rows="4" maxlength="20" placeholder="内容"></textarea>
+</p>>
+
+<%= text_area :page, :comtent %>
+# <textarea cols="40" id="page_content" name="page[content]" rows="20"></textarea>
